@@ -8,4 +8,6 @@ const homeSchema = new mongoose.Schema({
     date: { type: Date, default: Date.now }
 })
 
-const HomeModel = mongoose.model('Home', homeSchema)
+const HomeModel = mongoose.model('Users', homeSchema)
+
+module.exports = HomeModel
