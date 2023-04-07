@@ -2,8 +2,9 @@ const express = require('express')
 const routes = express()
 const users = require('./controllers/usersController')
 const singleUser = require('./controllers/singleUser')
+const home = require('./controllers/home')
 
-routes.get('/', (req, res) => res.send('Hello, World!'))
+routes.get('/', home.get)
 
 routes.get('/users', users.get)
 routes.post('/users', users.post)
